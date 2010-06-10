@@ -1,0 +1,31 @@
+<h2>3. Zeiteinträge auswählen</h2>
+<div class="contentbox">
+<% form_remote_tag :update => "schritt4",
+                   :url => { :action => :schritt4 },
+                   :loading => "Element.show('spinner4')",
+                   :complete => "Element.hide('spinner4')" do %>
+<table width="100%">
+<tr>
+  <th></th>
+  <th>Datum</th>
+  <th>Projekt</th>
+  <th>Leistung</th>
+  <th>Bemerkung</th>
+  <th>Stunden</th>
+</tr>  
+
+<% schritt3.each do |zeile| %>
+  <tr>
+    <td><%= check_box_tag "zeiten[]", zeile.id.to_s , true %></td>
+    <td><%= zeile.date_at %></td>
+    <td><%= zeile.project_name %></td>
+    <td><%= zeile.service_name %></td>
+    <td><%= zeile.note %></td>
+    <td><%= "%.2f" % (zeile.minutes.to_f / 60) %></td>
+<% end %>
+
+</table>
+<br />
+<%= submit_tag "Weiter...", :id => "submit" %>
+<% end %>
+</div>

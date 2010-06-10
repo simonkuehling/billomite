@@ -1,0 +1,22 @@
+<h2>6. Fertig!</h2>
+<div class="contentbox">
+<small>Code:</small><br />
+ <%= schritt6["code"] %><br /><br />
+<small>Message:</small><br />
+ <%= schritt6["message"] %><br /><br />
+<% if schritt6["error"] %>
+<small>Billomat Fehlermeldung:</small><br />
+ <%= schritt6["error"] %>
+<% else %>
+<small>Link zur Rechnung:</small><br />
+ <%= link_to "Rechnung in Billomat", url_for(schritt6["url"]) %><br /><br />
+
+<% form_remote_tag :update => "schritt7",
+                   :url => { :action => :schritt7 },
+                   :loading => "Element.show('spinner7')",
+                   :complete => "Element.hide('spinner7')" do %>
+<small>Die in Rechnung gestellten Zeiteinträge als abgeschlossen markieren:</small><br /><br />
+<%= submit_tag "Zeiteinträge abschließen!", :id => "submit" %>                   
+<% end %>
+<% end %>
+</div>

@@ -1,0 +1,20 @@
+<div id="help">
+<h3>Was ist <i>billomite</i>?</h3>
+<p>billomite ist eine WebApp, die das Zeiterfassungstool <i>mite</i> mit dem Fakturierungsdienst <i>Billomat</i> verbindet.
+Ihre ganze Aufgabe besteht darin, aus vielen gesammelten mite-Zeiteinträgen übersichtliche Rechnungspositionen
+in Billomat zu erstellen.<br />
+Die Zeiten werden - nach Projekten sortiert und nach Leistung gruppiert - jeweils
+als eine Summenposition zusammengefasst. Abschließend wird eine Entwurfsrechnung in Billomat erstellt und
+angeboten, die in Rechnung gestellten Zeiteinträge in mite als abgeschlossen zu markieren.</p>
+<p>billomite wurde geschrieben von <%= mail_to "mail@simonkuehling.de", "Simon Kühling" %> und steht in Kürze auch als OpenSource-Projekt zur Verfügung.</p>
+
+<h3>Was ist <i>mite</i>?</h3>
+<p>mite ist ein schlankes Online-Tool zur Erfassung und Auswertung von Arbeitszeit.<br />
+<%= link_to "http://mite.yo.lk", "http://mite.yo.lk" %></p>
+
+<h3>Was ist <i>Billomat</i>?</h3>
+<p>Billomat ist ein webbasierter Fakturierungsdienst.<br />
+<%= link_to "http://www.billomat.com", "http://www.billomat.com" %></p>
+
+<p><%= link_to "zurück", :controller => "home", :action => "index" %>
+</div>

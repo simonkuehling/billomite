@@ -1,0 +1,13 @@
+<h2>4. billomat-Kunde auswählen</h2>
+<div class="contentbox">
+<small>Alle verfügbaren Kunden in billomat:</small>
+<ul>
+<% schritt4.each do |id, name| %>
+  <li><b><%= link_to_remote name,
+                            :update => "schritt5",
+                            :url => {:action => "schritt5", :id => id, :name => name},
+                            :loading => "Element.show('spinner5')",
+                            :complete => "Element.hide('spinner5')" %></li>
+<% end %>
+</ul>
+</div>

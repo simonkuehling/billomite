@@ -1,0 +1,61 @@
+<div class="sidebox">
+<span><small>Letztes Programmupdate: 08.06.2010 13:00<br />
+Fehler gefunden? Mail an <%= mail_to "mail@simonkuehling.de", "Simon Kühling" %><br />
+<%= link_to_remote "Hilfe", 
+                            :update => "schritt1", 
+                            :url => {:action => "help"},
+                            :loading => "Element.show('spinner1')",
+                            :complete => "Element.hide('spinner1')" %></small><br /><br />
+<%= image_tag "beta.jpeg" %>
+</div>
+
+<p>
+<span id="logo"><%= link_to "billomite", :controller => "home", :action => "index" %></span>
+<span id="logotext">Übersichtliche Billomat-Rechnungen aus mite-Zeiteinträgen erstellen</span>
+</p>
+
+<br class="clear"/>
+
+<div id="spinner1" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt1">
+<h2>1. Konfiguration</h2>
+<div class="contentbox">
+<% form_remote_tag (:update => "schritt2",
+                    :url => { :action => :schritt2 },
+                    :loading => "Element.show('spinner2')",
+                    :complete => "Element.hide('spinner2')") do %>
+  <div class="leftrow">
+    <%= label_tag(:mite_id, "mite ID:") %>
+    <%= text_field_tag(:mite_id, params[:mite_id]) %>
+  </div>
+  <div class="rightrow">
+    <%= label_tag(:mite_key, "mite API Key:") %>
+    <%= text_field_tag(:mite_key, params[:mite_key]) %>
+  </div>
+  <br />
+  <div class="leftrow">
+    <%= label_tag(:billomat_id, "Billomat ID:") %>
+    <%= text_field_tag(:billomat_id, params[:billomat_id]) %>
+  </div>
+  <div class="rightrow">
+    <%= label_tag(:billomat_key, "Billomat API Key:") %>
+    <%= text_field_tag(:billomat_key, params[:billomat_key]) %>
+  </div>
+  <br />
+  <%= submit_tag "Weiter...", :id => "submit" %>
+<% end %>
+</div>
+</div>
+
+<div id="spinner2" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt2"></div>
+<div id="spinner3" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt3"></div>
+<div id="spinner4" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt4"></div>
+<div id="spinner5" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt5"></div>
+<div id="spinner6" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt6"></div>
+<div id="spinner7" class="spinnerbox" style="display:none"><%= image_tag "spinner.gif" %></div>
+<div id="schritt7"></div>

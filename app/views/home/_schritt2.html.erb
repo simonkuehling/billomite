@@ -1,0 +1,16 @@
+<div class="tipbox">
+<b>Tipp:</b> Bookmark mit deinen Einstellungen speichern - <%= link_to "hier ist der Link!", :controller => "home", :action => "index", :mite_id => params[:mite_id], :mite_key => params[:mite_key], :billomat_id => params[:billomat_id], :billomat_key => params[:billomat_key] %>
+</div>
+<h2>2. mite-Kunde auswählen</h2>
+<div class="contentbox">
+<small>Alle Kunden mit aktiven Projekten, die unabgeschlossene Zeiteinträge haben:</small>
+<ul>
+<% schritt2.each do |id, name| %>
+  <li><b><%= link_to_remote name, 
+                            :update => "schritt3", 
+                            :url => {:action => "schritt3", :id => id},
+                            :loading => "Element.show('spinner3')",
+                            :complete => "Element.hide('spinner3')" %></b></li>
+<% end %>
+</ul>
+</div>

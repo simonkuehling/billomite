@@ -1,0 +1,158 @@
+body {
+  font-family:arial;
+  padding:20px;
+}
+
+h1, h2, h3, a {
+  font-weight: normal;
+}
+
+#logo {
+  font-size:38px;
+  vertical-align:baseline;
+  border-right:1px solid;
+  padding-right:10px;
+}
+
+#logo a {
+  text-decoration:none;
+  color:black;
+}
+
+#logotext {
+  padding-left:5px;
+  font-size:12px;
+  vertical-align:baseline;
+}
+
+#help {
+  padding:20px;
+  margin:5px;
+  border:1px solid black;
+  
+}
+
+#help p {
+  font-size:0.9em;
+  line-height: 1.3em;
+}
+#help h3 {
+  font-weight:bold;
+}
+
+/*** NAVIGATION ***/
+
+#nav {
+  padding-top:10px;
+}
+
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} 
+
+#nav li {
+  float: left;
+  margin: 0 5px;
+  padding: 8px;
+  border:1px solid black;
+} 
+
+/*** CONTENT ***/
+
+.clear {
+  clear:both;
+}
+
+.contentbox {
+  padding:20px;
+  margin:5px;
+  background-color:#E3F6CE;
+}
+
+.contentbox ul {
+  list-style:none;
+}
+
+.contentbox ul, li {
+  padding-left:0;
+  margin-left:0;
+}
+
+.contentbox table {
+  border-collapse: collapse;
+}
+
+.contentbox th {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.contentbox th, td {
+  border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.tipbox {
+  padding:20px;
+  margin:5px;
+  background-color:#FFCC66;
+}
+
+.errorbox {
+  padding:20px;
+  margin:5px;
+  background-color:#FA5858;
+}
+
+.spinnerbox {
+  padding:20px;
+  margin:5px;
+}
+
+.sidebox {
+  float: right;
+  text-align: right;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+
+/*** FORMULARE ***/
+
+label, input, select { /* Alle Labels UND Formularelemente auswählen */
+  display: block;
+}
+
+input {
+  width: 350px;
+}
+
+form br { /* Alle Zeilenumbrüche in Formularen auswählen */
+  clear: left; /* das floating der labels und inputs aufheben */
+}
+
+input#submit { /* den Submit-Button */
+  float: none;
+  width: auto;
+}
+
+input#zeiten_ {
+  float: none;
+  width: auto;
+}
+
+label {
+ text-align: left; 
+ font-size:0.8em;
+ padding-right: 1em; 
+ float:none;
+}
+
+form .leftrow {
+  float: left;
+  padding-right: 1em;
+}

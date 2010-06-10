@@ -1,0 +1,28 @@
+<h2>5. Rechnungspositionen - fertigstellen?</h2>
+<div class="contentbox">
+<small>Billomat-Rechnung für:</small><br /> <%= schritt5["kundenname"] %><br /><br />
+<% form_remote_tag :update => "schritt6",
+                   :url => { :action => :schritt6 },
+                   :loading => "Element.show('spinner6')",
+                   :complete => "Element.hide('spinner6')" do %>
+<table width="100%">
+<tr>
+  <th align="left">Anzahl</th>
+  <th align="left">Preis</th>
+  <th align="left">Einheit</th>
+  <th align="left">Titel<br/><i>Beschreibung</i></th>
+</tr>  
+
+<% schritt5["positionen"].each do |zeile| %>
+  <tr valign="top">
+    <td><%= zeile["anzahl"] %></td>
+    <td><%= zeile["preis"] %></td>
+    <td><%= zeile["einheit"] %></td>
+    <td><%= zeile["titel"] %><br><i><%= simple_format zeile["beschreibung"] %></i></td>
+<% end %>
+
+</table>
+<br />
+<%= submit_tag "Rechnung erstellen!", :id => "submit" %>
+<% end %>
+</div>
