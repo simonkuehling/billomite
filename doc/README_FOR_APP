@@ -1,2 +1,22 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+== billomite
+
+billomite ist eine WebApp, die das Zeiterfassungstool *mite* mit dem 
+Fakturierungsdienst *Billomat* verbindet. Ihre ganze Aufgabe besteht 
+darin, aus vielen gesammelten mite-Zeiteinträgen übersichtliche 
+Rechnungspositionen in Billomat zu erstellen.
+
+Die Zeiten werden - nach Projekten sortiert und nach Leistung gruppiert -
+jeweils als eine Summenposition zusammengefasst. Abschließend wird eine 
+Entwurfsrechnung in Billomat erstellt und angeboten, die in Rechnung 
+gestellten Zeiteinträge in mite als abgeschlossen zu markieren.
+
+  WAS IST MITE?
+
+  mite ist ein schlankes Online-Tool zur Erfassung und Auswertung von
+  Arbeitszeit.
+  http://mite.yo.lk
+
+  WAS IST BILLOMAT?
+
+  Billomat ist ein webbasierter Fakturierungsdienst.
+  http://www.billomat.com
