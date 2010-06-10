@@ -1,11 +1,12 @@
 <div class="sidebox">
-<span><small>Letztes Programmupdate: 08.06.2010 13:00<br />
+<span><small>Letztes Programmupdate: 10.06.2010 12:53<br />
 Fehler gefunden? Mail an <%= mail_to "mail@simonkuehling.de", "Simon Kühling" %><br />
 <%= link_to_remote "Hilfe", 
                             :update => "schritt1", 
                             :url => {:action => "help"},
                             :loading => "Element.show('spinner1')",
-                            :complete => "Element.hide('spinner1')" %></small><br /><br />
+                            :complete => "Element.hide('spinner1')" %> / 
+<%= link_to "Code", "http://github.com/simonkuehling/billomite" %></small><br /><br />
 <%= image_tag "beta.jpeg" %>
 </div>
 
