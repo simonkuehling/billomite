@@ -112,7 +112,11 @@ class HomeController < ApplicationController
 
     billomat_kunden = {}
     data['client'].each do |client|
-      billomat_kunden[client['id'][0]['content'].to_s] = client['name'].to_s
+      if client['name'].to_s == ''
+        billomat_kunden[client['id'][0]['content'].to_s] = client['client_number'].to_s + " (ohne Firmenname)"
+      else
+        billomat_kunden[client['id'][0]['content'].to_s] = client['name'].to_s
+      end
     end
     
     render :partial => 'schritt4', :object => billomat_kunden
