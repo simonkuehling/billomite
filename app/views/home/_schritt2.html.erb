@@ -6,7 +6,7 @@
 <small>Alle Kunden mit aktiven Projekten, die unabgeschlossene Zeiteinträge haben:</small>
 <ul>
 <% schritt2.each do |id, name| %>
-  <li><b><%= link_to_remote name, 
+  <li><b><%= link_to_remote h(name), 
                             :update => "schritt3", 
                             :url => {:action => "schritt3", :id => id},
                             :loading => "Element.show('spinner3')",

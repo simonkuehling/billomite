@@ -1,6 +1,6 @@
 <h2>5. Rechnungspositionen - fertigstellen?</h2>
 <div class="contentbox">
-<small>Billomat-Rechnung für:</small><br /> <%= schritt5["kundenname"] %><br /><br />
+<small>Billomat-Rechnung für:</small><br /> <%= h(schritt5["kundenname"]) %><br /><br />
 <% form_remote_tag :update => "schritt6",
                    :url => { :action => :schritt6 },
                    :loading => "Element.show('spinner6')",
@@ -17,8 +17,8 @@
   <tr valign="top">
     <td><%= zeile["anzahl"] %></td>
     <td><%= zeile["preis"] %></td>
-    <td><%= zeile["einheit"] %></td>
-    <td><%= zeile["titel"] %><br><i><%= simple_format zeile["beschreibung"] %></i></td>
+    <td><%= h(zeile["einheit"]) %></td>
+    <td><%= h(zeile["titel"]) %><br><i><%= simple_format zeile["beschreibung"] %></i></td>
 <% end %>
 
 </table>

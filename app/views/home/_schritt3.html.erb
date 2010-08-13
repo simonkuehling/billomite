@@ -18,9 +18,9 @@
   <tr>
     <td><%= check_box_tag "zeiten[]", zeile.id.to_s , true %></td>
     <td><%= zeile.date_at %></td>
-    <td><%= zeile.project_name %></td>
-    <td><%= zeile.service_name %></td>
-    <td><%= zeile.note %></td>
+    <td><%= h(zeile.project_name) %></td>
+    <td><%= h(zeile.service_name) %></td>
+    <td><%= h(zeile.note) %></td>
     <td><%= "%.2f" % (zeile.minutes.to_f / 60) %></td>
 <% end %>
 

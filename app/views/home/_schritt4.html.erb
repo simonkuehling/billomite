@@ -5,7 +5,7 @@
 <% schritt4.each do |id, name| %>
   <li><b><%= link_to_remote name,
                             :update => "schritt5",
-                            :url => {:action => "schritt5", :id => id, :name => name},
+                            :url => {:action => "schritt5", :id => id, :name => h(name)},
                             :loading => "Element.show('spinner5')",
                             :complete => "Element.hide('spinner5')" %></li>
 <% end %>
