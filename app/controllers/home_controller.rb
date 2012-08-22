@@ -32,7 +32,7 @@ class HomeController < ApplicationController
     # billomat API Konfiguration
     url = session['billomat_id'] + '.billomat.net'
     http = Net::HTTP::new(url, 80)
-    path = '/api/users/myself'
+    path = '/api/clients/myself'
     
     headers = { 'Content-Type'     => 'application/xml',
                 'X-BillomatApiKey' => session['billomat_key'] }
